@@ -1,0 +1,32 @@
+﻿@model Intellect.Models.ExamUser
+
+@{
+    Layout = "AdminLayout";
+}
+
+<h4>User Dashboard</h4>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="management">
+                <button class="clickon"><a asp-action="GetProfile" asp-controller="Account">Profilim</a></button><br />
+                <button class="clickon"><a asp-action="Myresult" asp-controller="Account">Nəticələrim</a></button><br />
+                <button class="clickon"><a asp-action="Privacy" asp-controller="Home">Qaydalar</a></button><br />
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="profile">
+                <label class="mydetail" style="width:105px;">Ad/Soyad:</label><h5>@Model.TestTaker.Name</h5>
+                <label class="mydetail" style="width:105px;">Doğum tarixi:</label><h5>@Model.TestTaker.Birth.ToString("dd/MM/yyyy")</h5>
+                <label class="mydetail" style="width:105px;">Təhsil:</label><h5>@Model.TestTaker.Education</h5>
+                <label class="mydetail" style="width:105px;">Peşə:</label><h5> @Model.TestTaker.Job</h5>
+                <label class="mydetail" style="width:105px;">Telefon:</label><h5>@Model.TestTaker.Phone</h5>
+            </div>
+           
+        </div>
+        <div class="col-lg-4">
+            Access profiles
+        </div>
+    </div>
+</div>

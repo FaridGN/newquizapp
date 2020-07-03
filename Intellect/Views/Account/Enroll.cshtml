@@ -1,0 +1,34 @@
+﻿@model Intellect.Models.TestTaker
+
+@{
+    Layout = "AdminLayout";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+            <h4>Ilkin Qeydiyyat</h4><br />
+                                    <form method="post" asp-action="Enroll" asp-controller="Account">
+                                        <div asp-validation-summary="ModelOnly"></div>
+                                        <label asp-for="Name" style="width: 100px;">Ad/Soyad</label>
+                                        <input asp-for="Name" type="text" class="mytext" /><br />
+                                        <label asp-for="Birth" style="width: 100px;">Doğum tarixi</label>
+                                        <input asp-for="Birth" type="date" class="mydate" name="birthdate" /><br />
+                                        <label asp-for="Education" style="width: 100px;">Təhsil</label>
+                                        <input asp-for="Education" type="text" class="mytext" /><br />
+                                        <label asp-for="Job" style="width: 100px;">Peşə</label>
+                                        <input asp-for="Job" type="text" class="mytext" /><br />
+                                        <label asp-for="Phone" style="width: 100px;">Tel nömrəsi</label>
+                                        <input asp-for="Phone" type="text" class="mytext" /><br />
+                                        <input type="submit" value="Submit" />
+                                    </form>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+    </div>
+</div>
+

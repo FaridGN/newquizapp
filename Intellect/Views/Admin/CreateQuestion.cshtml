@@ -1,0 +1,22 @@
+﻿@model Intellect.Models.ViewModels.AdminViewModel
+
+@{
+    Layout = "AdminLayout";
+}
+
+<div class="container-fluid">
+    <h4>Create Question</h4><br />
+                        <form method="post" asp-action="CreateQuestion" asp-controller="Admin">
+                            <div asp-validation-summary="ModelOnly"></div>
+                            <label asp-for="Question.Name">Question</label>
+                            <input asp-for="Question.Name" type="text" class="mytext" /><br />
+                            <label asp-for="Question.Description">Question</label>
+                            <input asp-for="Question.Description" type="text" class="mytext" /><br />
+                            <label asp-for="Question.Exam.Name">Exam</label>
+                            <select asp-for="Question.ExamId" asp-items="@Model.Examlist"></select><br />
+                            <input type="submit" value="Submit" />
+                        </form>
+
+</div>
+ 
+

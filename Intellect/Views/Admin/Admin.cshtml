@@ -1,0 +1,49 @@
+﻿@model Intellect.Models.ViewModels.AdminViewModel
+@{
+    Layout = "AdminLayout";
+}
+ 
+<h4>Admin Dashboard</h4>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="management">
+                <button class="clickon"><a asp-action="Admin" asp-controller="Admin">Exams</a></button><br />
+                <button class="clickon"><a asp-action="Exams" asp-controller="Admin">Questions</a></button><br />
+                <button class="clickon"><a asp-action="CreateExam" asp-controller="Admin">Create Exam</a></button><br />
+                <button class="clickon"><a asp-action="CreateQuestion" asp-controller="Admin">Create Question</a></button><br />
+                <button class="clickon"><a asp-action="CreateAnswer" asp-controller="Admin">Create Answer</a></button><br />
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <table>
+                <tr>
+                    <th>Exam</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                @foreach (Exam item in Model.Exams)
+                {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.ExamDate.ToString("dd/MM/yyyy")</td>
+                    <td><a asp-action="EditExam" asp-controller="Admin" asp-route-id="@item.Id">Edit</a></td>
+                    <td><a asp-action="DeleteExam" asp-controller="Admin" asp-route-id="@item.Id">Delete</a></td>
+                </tr>
+                }
+
+            </table>
+        </div>
+        <div class="col-lg-4">
+            Exams
+            @foreach (Exam exam in Model.Exams)
+            {
+                <button class="clickon"><a asp-action="Test" asp-controller="Home" asp-route-id="@exam.Id">Start @exam.Name</a></button><br />
+            }
+        </div>
+    </div>
+</div>
+
+

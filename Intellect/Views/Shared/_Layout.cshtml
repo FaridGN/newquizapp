@@ -1,0 +1,145 @@
+﻿@using System.Threading
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ExamUser> SignInManager
+@inject UserManager<ExamUser> UserManager
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://kit.fontawesome.com/5e88d62c54.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Intellektual yarış meydanı</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row hControl">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  headerBrand">
+                    <a href="index.html"><img class="agilli" src="~/images/agilli.png" alt="AgilliGelir"></a>
+                </div>
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 headerNav">
+                    <nav>
+                        <ul>
+                            <li><a href="https://localhost:44303/">Ana Səhifə</a></li>
+                            <li>
+                                <a href="#">
+                                    Reytinq<i class="fas fa-sort-down navDown"></i>
+                                </a>
+                                <ul>
+                                    <li><a href="#winners">Qaliblərimiz</a></li>
+                                    <li><a href="#reytinq">Ümumi reytinq</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a asp-action="About" asp-controller="Home">Haqqımızda</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Əlaqə</a>
+
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-user"></i><i class="fas fa-sort-down navDown"></i></a>
+                                @if (SignInManager.IsSignedIn(User))
+                                {
+                                    <form method="post" asp-action="LogoutUser" asp-controller="Account">
+                                        <ul>
+                                            <li><a href="login.html">@UserManager.GetUserName(User)</a></li>
+                                            <li><button type="submit">Çıxış</button></li>
+                                        </ul>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <ul>
+                                        <li><a asp-action="LoginUser" asp-controller="Account">Daxil ol</a></li>
+                                        <li><a asp-action="Enroll" asp-controller="Account">Qeydiyyat</a></li>
+                                    </ul>
+                                }
+                            </li>
+                            <li>
+                                <a href="#" id="headerSearchBtn"></i></a>
+                                <ul id="rtlUl">
+                                    <li>
+                                        <input type="search" name="search" id="headerSearch" placeholder="Search">
+                                        <a href="#"><i class="fas fa-search" id="searchBtn"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="menuBar">
+                        <i id="menuBarIcon" class="fas fa-bars"></i>
+                        <div class="menuHeader">
+                            <ul>
+                                <li><a href="index.html">Ana Səhifə</a></li>
+                                <li>
+                                    <a href="#reytinq">Reytinq</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--end of navbar-->
+    @RenderBody()
+    <!--start of footer-->
+    <footer>
+        <div class=" container ">
+            <div class=" row ">
+                <div class=" col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 ">
+                    <div class=" footerNav ">
+                        <ul>
+                            <li><a href=" index.html ">Ana Səhifə</a></li>
+                            <li><a href=" #reytinq ">Reytinq</a></li>
+                            <li><a href=" about.html ">Haqqımızda</a></li>
+                            <li><a href="#contact">Əlaqə</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class=" col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
+                    <div class=" footerSocial ">
+                        <ul>
+                            <li><a href="#"><i class=" fab fa-facebook-f "></i></li>
+                            <li><a href="#"><i class=" fab fa-twitter "></i></a></li>
+                            <li><a href="#"><i class=" fab fa-google-plus-g "></i></a></li>
+                            <li><a href="#"><i class=" fab fa-pinterest-p "></i></a></li>
+                            <li><a href="#"><i class=" fab fa-linkedin-in "></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>© 2020, Müəllif hüquqları qorunur</p>
+        </div>
+    </footer>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="~/js/main.js"></script>
+
+    @RenderSection("Script", false)
+
+</body>
+
+</html>

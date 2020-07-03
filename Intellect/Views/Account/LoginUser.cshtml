@@ -1,0 +1,39 @@
+﻿@model Intellect.Models.ViewModels.LoginModel
+
+@{
+    Layout = "AdminLayout";
+}
+
+<section id="loginSec">
+    <div class="container">
+        <div class="loginBox">
+            <div class="imgBox">
+                <img src="image/register.png" alt="">
+
+            </div>
+            <div class="formBox">
+                <form method="post" asp-action="LoginUser" asp-controller="Account" class="myLogForm">
+                    <h2><b>Daxil ol</b></h2>
+                    <br>
+                    <div class=" form-row ">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <div class=" form-group col-md-12 ">
+                            <label asp-for="UserName">İstifadəçi adı</label>
+                            <input asp-for="UserName" type="text" class="form-control" id="inputEmail4">
+                            <span asp-validation-for="UserName"></span>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label asp-for="Password">Şifrə</label>
+                            <input asp-for="Password" type="password" class="form-control">
+                            <span asp-validation-for="Password"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class=" btn btn-primary">Daxil ol<i class="far fa-hand-point-right"></i></button>
+                    <br>
+                    <br>
+                    <p>Yeni istifadəçisən ? <a asp-action="RegisterUser" asp-controller="Account">Qeydiyyatdan keç</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

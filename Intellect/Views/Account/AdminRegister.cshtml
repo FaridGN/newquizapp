@@ -1,0 +1,59 @@
+﻿@model Intellect.Models.ViewModels.RegisterModel
+
+@{
+    Layout = "AdminLayout";
+}
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://kit.fontawesome.com/5e88d62c54.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Intellektual yarış meydanı</title>
+</head>
+
+<section class="registration">
+    <div class="reg-container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="register">
+                    <form method="post" asp-action="AdminRegister" asp-controller="Account">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <h6>Qeydiyyat</h6>
+                        <label asp-for="UserName" style="width: 100px" for="Username">Istifadeci Adi*</label>
+                        <input asp-for="UserName" class="loginput" type="text" value=""><br>
+                        <span asp-validation-for="UserName"></span>
+                        <label asp-for="Email" style="width: 100px" for="Email">Email*</label>
+                        <input asp-for="Email" class="loginput" type="email" value=""><br>
+                        <span asp-validation-for="Email"></span>
+                        <label asp-for="Password" style="width: 100px" for="Password">Şifrə*</label>
+                        <input asp-for="Password" class="loginput" type="text" value=""><br />
+                        <span asp-validation-for="Password"></span>
+                        <label asp-for="ConfirmPassword" style="width: 100px" for="Password">Şifrə Təsdiqi*</label>
+                        <input asp-for="ConfirmPassword" class="loginput" type="password" value="">
+                        <span asp-validation-for="ConfirmPassword"></span>
+                        <button type="submit" class="enter">Göndər</button><br>
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+

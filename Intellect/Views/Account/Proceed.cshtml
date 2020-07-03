@@ -1,0 +1,26 @@
+﻿@model Intellect.Models.TestTaker
+
+@{
+    Layout = "AdminLayout";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+   <h5>Məlumatların düzgünlüyünə əminsinizsə, Davam et düyməsini basın</h5>
+        </div>
+        <div class="col-lg-4">
+            <div class="profile">
+                <label class="mydetail" style="width:105px;">Ad/Soyad:</label><h5>@Model.Name</h5>
+                <label class="mydetail" style="width:105px;">Doğum tarixi:</label><h5>@Model.Birth.ToString("dd/MM/yyyy")</h5>
+                <label class="mydetail" style="width:105px;">Təhsil:</label><h5>@Model.Education</h5>
+                <label class="mydetail" style="width:105px;">Peşə:</label><h5> @Model.Job</h5>
+                <label class="mydetail" style="width:105px;">Telefon:</label><h5>@Model.Phone</h5>
+                <button><a asp-action="RegisterUser" asp-controller="Account" asp-route-id="@Model.Id">Davam et</a></button>
+            </div>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+    </div>
+</div>

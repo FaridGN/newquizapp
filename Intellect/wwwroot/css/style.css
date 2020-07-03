@@ -1,0 +1,3393 @@
+* li {
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.agilli{
+    width: 150px;
+    height: 80px;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: #0000ff;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+header .hControl {
+    display: flex;
+    align-items: center;
+}
+
+header .headerNav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .headerNav .menuBar {
+    display: none;
+    color: white;
+    font-size: 2em;
+    position: relative;
+}
+
+header .headerNav .menuBar .menuHeader {
+    position: absolute;
+    left: -491px;
+    width: 2031%;
+    height: auto;
+    padding: 49px;
+    background-color: #0066EB;
+    display: none;
+}
+
+header .headerNav .menuBar .menuHeader ul {
+    display: block;
+}
+
+header .headerNav .menuBar .menuHeader ul li {
+    background-color: #0046a17e;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 3px;
+}
+
+header .headerNav .menuBar .menuHeader ul li a {
+    color: white;
+    font-size: 0.7em;
+}
+
+header .headerNav ul {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+header .headerNav ul li {
+    margin: 0 15px;
+}
+
+header .headerNav ul li a {
+    text-decoration: none;
+    color: rgb(223, 223, 223);
+    font-size: 0.95em;
+    transition: all 0.3s;
+}
+
+header .headerNav ul li a:hover {
+    color: rgba(223, 223, 223, 0.753);
+}
+
+header .headerNav ul li .navDown {
+    transform: translate(8px, -2px);
+}
+
+header .headerNav ul li ul {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+    width: 160px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+    border-radius: 3px;
+    top: 61px;
+    transition: all 0.2s;
+    z-index: -5;
+}
+
+header .headerNav ul li:hover:not(:last-child) ul {
+    visibility: visible;
+    opacity: 1;
+    top: 30px;
+    z-index: 50
+}
+
+header .headerNav ul li ul li {
+    margin: 5px 0;
+    transition: all 0.5s;
+}
+
+header .headerNav ul li ul li a {
+    color: #6C7A89;
+    font-size: 0.9em;
+}
+
+header .headerNav ul li ul li:hover {
+    transform: translateX(10px);
+}
+
+header .headerNav ul li ul li:hover a {
+    color: #0066EB;
+}
+
+header .headerNav ul li ul::before {
+    border-left: 10px solid rgba(255, 255, 255, 0);
+    border-right: 10px solid rgba(255, 255, 255, 0);
+    border-top: 10px solid #fff;
+    content: "";
+    height: 0;
+    left: 15px;
+    position: absolute;
+    top: -8px;
+    transform: rotate(180deg);
+    width: 0;
+}
+
+header .headerNav ul li #rtlUl {
+    display: none;
+    visibility: visible;
+    opacity: 1;
+    width: 350px;
+    left: 100px;
+    transform: translateY(-25px)
+}
+
+header .headerNav ul li #rtlUl li {
+    transform: none;
+}
+
+header .headerNav ul li #rtlUl li #headerSearch {
+    width: 296px;
+    border: none;
+}
+
+header .headerNav ul li #rtlUl li i {
+    margin-left: 10px;
+}
+
+header .headerNav ul li #rtlUl::before {
+    border-left: 10px solid rgba(255, 255, 255, 0);
+    border-right: 10px solid rgba(255, 255, 255, 0);
+    border-top: 10px solid #fff;
+    content: "";
+    height: 0;
+    left: 311px;
+    position: absolute;
+    top: -8px;
+    transform: rotate(180deg);
+    width: 0;
+}
+
+
+#siteBanner {
+    width: 100%;
+    height: 667px;
+    background-image: url("indexBanner.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#siteBanner .bannerLayout {
+    width: 100%;
+    height: 667px;
+    background-color: rgba(0, 102, 235, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#siteBanner .bannerLayout .containInfo {
+    text-align: center!important;
+}
+
+#siteBanner .bannerLayout .containInfo .clever {
+    font-size: 5em;
+    color: white;
+    position: relative;
+}
+
+#siteBanner .bannerLayout .containInfo .clever .designWord {
+    position: relative;
+    display: inline-block;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: normal;
+}
+
+#siteBanner .bannerLayout .containInfo .clever .businessWord{
+    position: absolute;
+    display: none;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    top: 0;
+    right: -77px;
+}
+
+#siteBanner .bannerLayout .containInfo p {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#siteBanner .bannerLayout .containInfo a {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid white;
+}
+
+#siteBanner .bannerLayout .containInfo .daxilol {
+    margin-right: 20px;
+    background-color: white;
+    color: #171F42;
+}
+
+#siteBanner .bannerLayout .containInfo .signup {
+    box-shadow: inset 0 0 0 0 #fff;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+#siteBanner .bannerLayout .containInfo .signup:hover {
+    color: #171F42;
+    box-shadow: inset 0 0 0 50px white;
+}
+
+#intellektInfo {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+#intellektInfo .intellektBox {
+    text-align: center;
+}
+.intellektWord h2{
+    font-family: 'Anton', sans-serif;
+}
+.thanks h2{
+    font-family: 'Anton', sans-serif;
+    color:black;
+}
+
+#intellektInfo .intellektBox .intellektWord {
+    margin-bottom: 90px;
+}
+
+#intellektInfo .intellektBox .intellektWord h1 {
+    font-weight: bold;
+    color: #272E49;
+}
+
+#intellektInfo .intellektBox .intellektWord p {
+    color: #98A2AC;
+}
+
+#intellektInfo .intellektBox .iBox i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #FF5723;
+    transition: all 0.3s;
+}
+
+#intellektInfo .intellektBox .iBox h4 {
+    margin-bottom: 10px;
+    color: #272E49;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox a {
+    padding: 5px 10px;
+    border: 1px solid #FF5723;
+    color: #FF5723;
+    background-color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8em;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox p {
+    font-size: 0.9em;
+    color: #98A2AC;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox:hover i {
+    transform: translateY(-30px)
+}
+
+#intellektInfo .intellektBox .iBox .cardBox:hover h4 {
+    color: #FF5723;
+}
+
+#intellektInfo .intellektBox .iBox a:hover {
+    color: white;
+    background-color: #FF5723;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox.cbox2 i {
+    color: #0066EB;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox.cbox2 a {
+    border: 1px solid #0066EB;
+    color: #0066EB;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox.cbox2 a:hover {
+    color: white;
+    background-color: #0066EB
+}
+
+#intellektInfo .intellektBox .iBox .cardBox.cbox2:hover h4 {
+    color: #0066EB;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox.cbox3 i {
+    color: #51CAE3;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox.cbox3 a {
+    border-color: #51CAE3;
+    color: #51CAE3;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox.cbox3 a:hover {
+    background-color: #51CAE3;
+    color: white;
+}
+
+#intellektInfo .intellektBox .iBox .cardBox.cbox3:hover h4 {
+    color: #51CAE3;
+}
+
+
+
+#qaliblerimiz {
+    width: 100%;
+    height: 900px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#qaliblerimiz .qalibWord {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#qaliblerimiz .qalibWord h2 {
+    font-weight: bold;
+    font-size: 2.8em;
+}
+
+#qaliblerimiz .qalibCard .card,
+.card-footer {
+    border: none;
+    background: white;
+}
+
+#qaliblerimiz .qalibCard .card img {
+    border-radius: 10px;
+}
+
+#qaliblerimiz .qalibCard,
+img {
+    transition: all 0.3s;
+}
+
+#qaliblerimiz .qalibCard:hover {
+    transform: translateY(-30px);
+}
+
+#qaliblerimiz .qalibCard:hover img {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.555);
+}
+
+#rating {
+    width: 100%;
+    height: 800px;
+    background-color: #0066EB;
+    display: flex;
+    align-items: center;
+}
+
+#rating .ratingWord {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#rating .ratingWord h2 {
+    font-weight: bold;
+    font-size: 2.8em;
+    color: white;
+}
+
+#rating .ratingCard {
+    height: 540px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px 40px;
+    transition: all 0.5s;
+ 
+}
+
+#rating .ratingCard .ratingNum {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #0066EB;
+    border-radius: 35px;
+}
+
+#rating .ratingCard .ratingNum.ratingColor2 {
+    background-color: #00C9AB;
+}
+
+#rating .ratingCard .ratingNum.ratingColor3 {
+    background-color: #FF5723;
+}
+
+#rating .ratingCard div>span {
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#rating .ratingCard h2 {
+    font-size: 4em;
+    margin: 20px 0;
+}
+
+#rating .ratingCard .ratingListDiv {
+    margin: 20px 0;
+    margin-bottom: 40px;
+}
+
+#rating .ratingCard .ratingListDiv ul {
+    padding: 0;
+}
+
+#rating .ratingCard .ratingListDiv ul li {
+    margin-bottom: 20px;
+    color: #98A2AC;
+}
+
+#rating .ratingCard .seemore {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #637282;
+    border-radius: 50px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: white;
+}
+
+#rating .ratingCard .seemore a {
+    text-decoration: none;
+    color: #637282;
+    font-weight: bold;
+}
+
+#rating .ratingCard .seemore a i {
+    transform: translateX(127px);
+    transition: all 0.5s;
+}
+
+#rating .ratingCard:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.685);
+}
+
+#rating .ratingCard .seemore:hover {
+    background-color: #637282;
+}
+
+#rating .ratingCard .seemore:hover>a {
+    color: white;
+    text-indent: -20px;
+}
+
+#rating .ratingCard .seemore:hover a i {
+    transform: translateX(90px);
+    color: white;
+}
+
+#reviewSlider {
+    width: 100%;
+    height: 500px;
+    background-image: url("sliderTeam.jpg");
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position-x: -20px;
+    display: flex;
+    align-items: center;
+}
+
+#reviewSlider .containSlideItem {
+    text-align: center;
+    color: white;
+}
+
+#reviewSlider .containSlideItem img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#reviewSlider .containSlideItem h2 {
+    margin-bottom: 30px;
+}
+
+#reviewSlider .containSlideItem h6 {
+    margin-bottom: 30px;
+}
+
+
+
+#contactInfo {
+    width: 100%;
+    height: 750px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+#contactInfo .contactHead {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#contactInfo .contactHead h2 {
+    font-weight: bold;
+    font-size: 2.8em;
+    color: #171F3C
+}
+
+#contactInfo .cDef {
+    display: flex;
+    margin-bottom: 30px
+}
+
+#contactInfo .cDef h4 {
+    color: #171F3C;
+}
+
+#contactInfo .cDef a {
+    text-decoration: none;
+    color: #171F3C;
+}
+
+#contactInfo .cDef .iconDef {
+    margin-right: 25px;
+}
+
+#contactInfo .cDef .iconDef {
+    font-size: 2em;
+}
+
+#contactInfo .cDef .iconDef i {
+    transition: all 0.5s;
+    color: #FF5723;
+}
+
+#contactInfo .cDef .iconDef1 i {
+    margin-right: 10px;
+}
+
+#contactInfo .cDef:hover .iconDef i {
+    transform: scale(1.5)
+}
+
+#contactInfo .googleMap {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00000061;
+}
+
+#sendMessage {
+    width: 100%;
+    height: 750px;
+    background-image: url("sendmessage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+#sendMessage .sendMessageWord {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#sendMessage .sendMessageWord h2 {
+    color: black;
+    font-size: 2.8em;
+    font-weight: bold;
+}
+
+#sendMessage form {
+    width: 50%;
+}
+
+#sendMessage form .form-control {
+    height: calc(2.2em + .75rem + 2px);
+}
+
+#sendMessage form .form-group textarea {
+    height: 175px;
+}
+
+#sendMessage form .form-group label {
+    color: white;
+}
+
+#sendMessage form button {
+    background-color: #ffffff;
+    color: #171F3C;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: inset 0 0 0 0 #fff;
+    transition: all 0.5s ease-in-out;
+    border-color: white;
+}
+
+#sendMessage form button:hover {
+    color: white;
+    box-shadow: inset 0 0 0 50px #9c9c9c;
+    border-color: #9c9c9c;
+}
+
+#brandSlider {
+    width: 100%;
+    height: 130px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+#brandSlider .owl-carousel .owl-item img {
+    width: 70%;
+    opacity: 0.5
+}
+
+#brandSlider .owl-carousel .owl-dots {
+    display: none;
+}
+
+#brandSlider .owl-carousel .owl-item img:hover {
+    opacity: 1
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #F9FBFF;
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    color: #6C7A89;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+footer .footerNav ul {
+    display: flex;
+    padding: 0;
+}
+
+footer .footerNav ul {
+    display: flex;
+    padding: 0;
+}
+
+footer .footerNav ul li a {
+    color: #637282;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .footerNav ul li a:hover {
+    color: #0066EB;
+}
+
+footer .footerNav ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+footer .footerSocial ul {
+    display: flex;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+footer .footerSocial ul li a {
+    font-size: 1.5em;
+    color: #637282;
+}
+
+footer .footerSocial ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+footer .footerSocial ul li a:hover {
+    color: #0066EB;
+}
+
+#loginSec{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+}
+
+#loginSec .loginBox{
+    height: 500px;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginSec .loginBox .imgBox{
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.534);
+    border-radius: 15px;
+}
+
+#loginSec .loginBox .imgBox h1{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+#loginSec .loginBox .imgBox p{
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    color: white;
+    font-size: 2.5em;
+}
+
+
+#loginSec .loginBox .imgBox img{
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    
+}
+
+#loginSec .loginBox .formBox{
+    width: 35%;
+    height: 507px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 0 10px #0000008f;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+#loginSec .loginBox .formBox .myLogForm{
+    width: 81%;
+}
+
+#loginSec .loginBox .formBox .myLogForm input{
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+#loginSec .loginBox .formBox .myLogForm button{
+    width: 100%;
+    margin-top: 16px;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    transition: all 0.3s;
+    text-indent: 0px;
+}
+
+#loginSec .loginBox .formBox .myLogForm button i{
+    transform: translateX(100px);
+    transition: all 0.3s;
+    opacity: 0;
+
+}
+
+#loginSec .loginBox .formBox .myLogForm p{
+    text-align: center;
+}
+
+#loginSec .loginBox .formBox .myLogForm p a{
+    text-decoration: none;
+}
+
+
+
+#loginSec .loginBox .formBox .myLogForm button:hover{
+    text-indent: -10px;
+}
+#loginSec .loginBox .formBox .myLogForm button:hover i{
+    transform: translateX(46px);
+    opacity: 1;
+}
+
+#contactPage{
+    width: 100%;
+    height: 1500px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+#contactPage .contactsectionHeader{
+   text-align: center;
+   margin-bottom: 80px;
+}
+
+#contactPage .contactsectionHeader h1{
+    font-size: 4em;
+    font-weight: bold;
+ }
+ #contactPage .contactsectionHeader p{
+    font-size: 1.5em;
+ }
+
+#contactPage .contactIcons{
+   display: flex;
+}
+#contactPage .contactIcons .containContactBoxItems{
+   text-align: center;
+}
+
+#contactPage .contactIcons .containContactBoxItems i{
+    color: #FF5723;
+    font-size: 2.4em;
+    margin-bottom: 45px
+ }
+
+ #contactPage .contactIcons .containContactBoxItems h3{
+    color: #FF5723;
+    margin-bottom: 5px
+ }
+
+ #contactPage .contactIcons .containContactBoxItems p{
+    font-weight: bold;
+ }
+
+ #contactPage .contactIcons .containContactBoxItems button{
+    color:white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: #53BF4F;
+ } 
+ 
+ #contactPage .contactGmap{
+  margin-top: 150px;
+   display: flex;
+   justify-content: space-between
+ }
+
+ #contactPage .contactGmap .googleMap{
+   overflow: hidden;
+ } 
+
+ #contactPage .contactGmap form button{
+    background: white;
+    border:1px solid black;
+    color: black;
+  } 
+
+  #contactPage .followheader{
+    text-align: center;
+    margin-top: 60px;
+ }
+ #contactPage .followheader h2{
+    font-size: 3em;
+    font-size: bold;
+  }
+  #contactPage .followheader ul{
+      margin-top: 30px;
+      padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  #contactPage .followheader li{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    text-align: center;
+    line-height: 87px;
+     background-color: #008ec6;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.521);
+   transform:translateY(0);
+    transition: all 0.4s;
+    cursor: pointer;    
+  }
+
+  #contactPage .followheader li:first-child{
+    background-color: #4c6fa9;
+  }
+   
+  #contactPage .followheader li:nth-child(2){
+    background-color: #64baf2;
+  }#contactPage .followheader li:nth-child(3){
+    background-color: #e25e41;
+  }
+  #contactPage .followheader li:nth-child(4){
+    background-color: #ff0808;
+  }
+  #contactPage .followheader li i{
+   font-size: 1.5em;
+   color: white;
+  }
+
+  #contactPage .followheader li:hover{
+   transform:translateY(-15px);
+  }
+
+#aboutPage{
+    width: 100%;
+    height: 400px;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+}
+#aboutPage .aboutWordsSec{
+   text-align: center;
+}
+
+#aboutPage .aboutWordsSec h1{
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #171F42;
+  }
+  #aboutPage .aboutWordsSec p{
+    font-size: 1.5em;
+    color: rgb(133, 133, 133);
+  }
+  #intellektInfo {
+    height: 1000px;
+} 
+
+#aboutVideoSec{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+}
+
+#aboutVideoSec .aboutVideo{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+#aboutVideoSec .aboutVideo .aboutVideoFrame{
+   width: 800px;
+   height: 400px;
+}
+
+#aboutMission{
+    width: 100%;
+    height: 1200px;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+}
+
+#aboutMission .aboutImg{
+    margin-bottom: 60px;
+}
+
+#aboutMission .aboutImgEven{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#aboutMission .aboutImg img{
+    border-radius: 10px;
+    box-shadow: 0 0  20px rgba(0, 0, 0, 0.493);
+}
+
+#aboutMission .aboutImgWords h2{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#aboutMission .aboutImgWords p{
+    font-size: 1.2em;
+    color: #98A2AC;
+}
+#aboutMission{
+    margin-top: -230px;
+}
+
+
+
+
+
+@media only screen and (min-width: 320px) {
+  
+    #myytframe{
+        width: 300px;
+        height: 200px;
+        border: none;
+    }
+    
+    .gImg img{
+        width: 248px;
+    }
+    #leftgalleryImgIcon{
+        position: absolute;
+        left: -5px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 2em;
+    }
+    #rightgalleryImgIcon{
+        position: absolute;
+        left:274px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 2em;
+    }
+   
+    header .headerNav nav {
+        display: none;
+    }
+    header .headerNav .menuBar {
+        display: block;
+    }
+    header .headerNav .menuBar .menuHeader {
+        position: absolute;
+        left: -277px;
+        width: 1142%;
+        height: auto;
+        padding: 49px;
+        background-color: #0066EB;
+        display: none;
+    }
+   
+    #siteBanner {
+        width: 100%;
+        height: 541px;
+    }
+    #siteBanner .bannerLayout {
+        height: 541px;
+    }
+    #siteBanner .bannerLayout .containInfo .clever {
+        font-size: 2.2em;
+    }
+    #siteBanner .bannerLayout .containInfo p {
+        font-size: 1em;
+    }
+    #siteBanner .bannerLayout .containInfo .daxilol {
+        margin-right: 0;
+        background-color: white;
+        color: #171F42;
+    }
+    #siteBanner .bannerLayout .containInfo a {
+        font-size: 1.1em;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    #intellektInfo {
+        width: 100%;
+        height: 1300px;
+    }
+    #intellektInfo .intellektBox .intellektWord h1 {
+        font-weight: bold;
+        color: #272E49;
+        font-size: 2rem;
+    }
+    #intellektInfo .iBox .cardBox {
+        margin-bottom: 50px;
+    }
+    #intellektInfo .intellektBox .iBox h4 {
+        font-size: 1.3rem;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox p {
+        font-size: 0.9em;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox a {
+        font-size: 0.9em;
+    }
+   
+    
+    #qaliblerimiz {
+        width: 100%;
+        height: 2200px;
+    }
+    #qaliblerimiz .qalibWord h2 {
+        font-size: 2.5em;
+    }
+    #qaliblerimiz .qalibWord p {
+        color: #98A2AC;
+        font-size: 1em;
+    }
+    #qaliblerimiz .qalibCard .card,
+    .card-footer {
+        margin-bottom: 19px;
+    }
+ 
+    #rating {
+        height: 2100px;
+    }
+    #rating .ratingCard {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+ 
+    #reviewSlider {
+        background-size: cover;
+        background-position-x: -547px;
+    }
+
+    #contactInfo {
+        height: 965px;
+        margin-top: -250px;
+    }
+ 
+    #sendMessage .sendMessageWord h2 {
+        font-size: 1.8em;
+    }
+    #sendMessage form {
+        width: 87%;
+    }
+   
+    #brandSlider .owl-carousel .owl-item img {
+        width: 98%;
+        opacity: 0.5;
+    }
+
+    footer {
+        overflow: hidden;
+    }
+    footer .footerNav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer .footerNav ul li a {
+        font-size: 0.9em;
+    }
+    footer .footerSocial ul {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+    footer p {
+        font-size: 0.9em;
+        text-align: center;
+    }
+    
+    #loginSec {
+        width: 100%;
+        height: 710px;
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    #loginSec .loginBox{
+        height: 500px;
+       display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #loginSec .loginBox .imgBox{
+       display: none;
+    }
+
+    #loginSec .loginBox .formBox {
+        width: 100%;
+    }
+   
+    #contactPage {
+        width: 100%;
+        height: 2161px;
+    }
+
+    #contactPage .contactIcons {
+        display: block;
+    }
+    #contactPage .contactsectionHeader h1 {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    #contactPage .contactGmap {
+        display: block;
+    } 
+    #contactPage .contactGmap form{
+        width: 75%;
+        margin-top: 50px;
+    }
+
+    #contactPage .followheader ul {
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #contactPage .followheader ul li {
+        width: 60px;
+        height: 60px;
+        line-height: 69px;
+    }
+  
+}
+
+@media only screen and (min-width: 375px) {
+
+    header .headerNav nav {
+        display: none;
+    }
+    header .headerNav .menuBar {
+        display: block;
+    }
+    header .headerNav .menuBar .menuHeader {
+        position: absolute;
+        left: -333px;
+        width: 1344%;
+        height: auto;
+        padding: 49px;
+        background-color: #0066EB;
+        display: none;
+    }
+   
+    #siteBanner {
+        width: 100%;
+        height: 541px;
+    }
+    #siteBanner .bannerLayout {
+        height: 541px;
+    }
+    #siteBanner .bannerLayout .containInfo .clever {
+        font-size: 2.2em;
+    }
+    #siteBanner .bannerLayout .containInfo p {
+        font-size: 1em;
+    }
+    #siteBanner .bannerLayout .containInfo .daxilol {
+        margin-right: 0;
+        background-color: white;
+        color: #171F42;
+    }
+    #siteBanner .bannerLayout .containInfo a {
+        font-size: 1.1em;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    #intellektInfo {
+        width: 100%;
+        height: 1300px;
+    }
+    #intellektInfo .iBox .cardBox {
+        margin-bottom: 50px;
+    }
+    #intellektInfo .intellektBox .iBox h4 {
+        font-size: 1.3rem;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox p {
+        font-size: 0.9em;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox a {
+        font-size: 0.9em;
+    }
+   
+    #qaliblerimiz {
+        width: 100%;
+        height: 2200px;
+    }
+    #qaliblerimiz .qalibWord h2 {
+        font-size: 2.5em;
+    }
+    #qaliblerimiz .qalibWord p {
+        color: #98A2AC;
+        font-size: 1em;
+    }
+    #qaliblerimiz .qalibCard .card,
+    .card-footer {
+        margin-bottom: 19px;
+    }
+    
+ 
+    #rating {
+        height: 2100px;
+    }
+    #rating .ratingCard {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+ 
+    #reviewSlider {
+        background-size: cover;
+        background-position-x: -547px;
+    }
+    
+    #contactInfo {
+        height: 965px;
+    }
+   
+    #sendMessage .sendMessageWord h2 {
+        font-size: 1.8em;
+    }
+    #sendMessage form {
+        width: 87%;
+    }
+   
+    #brandSlider .owl-carousel .owl-item img {
+        width: 98%;
+        opacity: 0.5;
+    }
+  
+    footer {
+        overflow: hidden;
+    }
+    footer .footerNav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer .footerNav ul li a {
+        font-size: 0.9em;
+    }
+    footer .footerSocial ul {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+    footer p {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+
+     #loginSec {
+        width: 100%;
+        height: 710px;
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    #loginSec .loginBox{
+        height: 500px;
+       display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #loginSec .loginBox .imgBox{
+       display: none;
+    }
+
+    #loginSec .loginBox .formBox {
+        width: 100%;
+    }
+
+     #contactPage {
+        width: 100%;
+        height: 2161px;
+    }
+
+    #contactPage .contactIcons {
+        display: block;
+    }
+
+    #contactPage .contactsectionHeader h1 {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    #contactPage .contactGmap {
+        display: block;
+    }
+
+    #contactPage .contactGmap form {
+        width: 80%;
+        margin-top:50px;
+    }
+
+    #contactPage .followheader ul {
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #contactPage .followheader ul li {
+        width: 60px;
+        height: 60px;
+        line-height: 69px;
+    }
+  
+}
+
+@media only screen and (min-width: 425px) {
+    header .headerNav nav {
+        display: none;
+    }
+    header .headerNav .menuBar {
+        display: block;
+    }
+    header .headerNav .menuBar .menuHeader {
+        position: absolute;
+        left: -382px;
+        width: 1517%;
+        height: auto;
+        padding: 49px;
+        background-color: #0066EB;
+        display: none;
+    }
+   
+    #siteBanner {
+        width: 100%;
+        height: 541px;
+    }
+    #siteBanner .bannerLayout {
+        height: 541px;
+    }
+    #siteBanner .bannerLayout .containInfo .clever {
+        font-size: 2.2em;
+    }
+    #siteBanner .bannerLayout .containInfo p {
+        font-size: 1em;
+    }
+    #siteBanner .bannerLayout .containInfo .daxilol {
+        margin-right: 0;
+        background-color: white;
+        color: #171F42;
+    }
+    #siteBanner .bannerLayout .containInfo a {
+        font-size: 1.1em;
+        display: block;
+        margin-bottom: 20px;
+    }
+   
+    #intellektInfo {
+        width: 100%;
+        height: 1300px;
+    }
+    #intellektInfo .iBox .cardBox {
+        margin-bottom: 50px;
+    }
+    #intellektInfo .intellektBox .iBox h4 {
+        font-size: 1.3rem;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox p {
+        font-size: 0.9em;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox a {
+        font-size: 0.9em;
+    }
+ 
+    #qaliblerimiz {
+        width: 100%;
+        height: 2339px;
+    }
+    #qaliblerimiz .qalibWord h2 {
+        font-size: 2.5em;
+    }
+    #qaliblerimiz .qalibWord p {
+        color: #98A2AC;
+        font-size: 1em;
+    }
+    #qaliblerimiz .qalibCard .card,
+    .card-footer {
+        margin-bottom: 19px;
+    }
+ 
+    #rating {
+        height: 2100px;
+    }
+    #rating .ratingCard {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    #reviewSlider {
+        background-size: cover;
+        background-position-x: -547px;
+    }
+ 
+    #contactInfo {
+        height: 965px;
+    }
+ 
+    #sendMessage .sendMessageWord h2 {
+        font-size: 1.8em;
+    }
+    #sendMessage form {
+        width: 87%;
+    }
+   
+    #brandSlider .owl-carousel .owl-item img {
+        width: 98%;
+        opacity: 0.5;
+    }
+ 
+    footer {
+        overflow: hidden;
+    }
+    footer .footerNav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer .footerNav ul li a {
+        font-size: 0.9em;
+    }
+    footer .footerSocial ul {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+    footer p {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+     #loginSec {
+        width: 100%;
+        height: 710px;
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    #loginSec .loginBox{
+        height: 500px;
+       display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #loginSec .loginBox .imgBox{
+       display: none;
+    }
+
+    #loginSec .loginBox .formBox {
+        width: 100%;
+    }
+
+      #contactPage {
+        width: 100%;
+        height: 2161px;
+    }
+
+    #contactPage .contactIcons {
+        display: block;
+    }
+    
+    #contactPage .contactsectionHeader h1 {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    #contactPage .contactGmap {
+        display: block;
+    }
+
+    #contactPage .contactGmap form {
+        width: 80%;
+        margin-top:50px;
+    }
+
+    #contactPage .followheader ul {
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #contactPage .followheader ul li {
+        width: 60px;
+        height: 60px;
+        line-height: 69px;
+    }
+  }
+
+@media only screen and (min-width: 768px) {
+    header .headerNav nav {
+        display: block;
+    }
+    header .headerNav .menuBar {
+        display: none;
+    }
+       #siteBanner {
+        width: 100%;
+        height: 925px;
+    }
+    #siteBanner .bannerLayout {
+        height: 925px;
+    }
+
+    #siteBanner .bannerLayout .containInfo {
+        width: 100%;
+    }
+    #siteBanner .bannerLayout .containInfo .clever {
+        font-size: 4.4em;
+    }
+    .clever{
+        margin-top: -20%;
+        margin-left: -20%
+
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn {
+        display: flex;
+        justify-content: center;
+    }
+    #siteBanner .bannerLayout .containInfo p {
+        font-size: 1.9em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn .daxilol {
+        margin-right: 15px;
+        background-color: white;
+        color: #171F42;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn a {
+        font-size: 1.1em;
+        padding: 10px 30px;
+        border-radius: 5px
+    }
+
+    #intellektInfo {
+        width: 100%;
+        height: 700px;
+    }
+    #intellektInfo .iBox .cardBox {
+        margin-bottom: 50px;
+    }
+    #intellektInfo .intellektBox .iBox h4 {
+        font-size: 1.3rem;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox p {
+        font-size: 0.9em;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox a {
+        font-size: 0.9em;
+    }
+
+   
+    #qaliblerimiz {
+        width: 100%;
+        height: 850px;
+    }
+    #qaliblerimiz .qalibWord h2 {
+        font-size: 2.5em;
+    }
+    #qaliblerimiz .qalibWord p {
+        color: #98A2AC;
+        font-size: 1em;
+    }
+     #qaliblerimiz .qalibCard .card,
+    .card-footer {
+        margin-bottom: 19px;
+    }
+    #qaliblerimiz .qalibCard .card,
+    .card-body {
+        flex: 1 1 auto;
+        padding: 0.35rem;
+    }
+
+    #rating {
+        height: 900px;
+    }
+    #rating .ratingCard {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    #rating .ratingCard div>span {
+        font-size: 1.2em;
+    }
+    #rating .ratingCard h2 {
+        font-size: 3.2em;
+        margin: 39px 0;
+    }
+
+    #rating .ratingCard {
+        height: 540px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 19px 11px;
+        transition: all 0.5s;
+    }
+   
+    #reviewSlider {
+        background-size: cover;
+        background-position-x: -547px;
+    }
+    #contactInfo {
+        height: 965px;
+    }
+    #sendMessage .sendMessageWord h2 {
+        font-size: 1.8em;
+    }
+    #sendMessage form {
+        width: 87%;
+    }
+    #brandSlider .owl-carousel .owl-item img {
+        width: 98%;
+        opacity: 0.5;
+    }
+    footer {
+        overflow: hidden;
+    }
+    footer .footerNav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer .footerNav ul li a {
+        font-size: 0.9em;
+    }
+    footer .footerSocial ul {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+    footer p {
+        font-size: 0.9em;
+        text-align: left;
+    }
+       #loginSec {
+        width: 100%;
+        height: 710px;
+        display: flex;
+        align-items: center;    
+    }
+    
+    
+    #loginSec .loginBox{
+        height: 500px;
+       display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #loginSec .loginBox .imgBox{
+       display: block;
+       width: 44%;
+
+    }
+
+    #loginSec .loginBox .imgBox h1{
+        font-size: 3.5em;
+ 
+     }
+
+     #loginSec .loginBox .imgBox p{
+        font-size: 2em;
+ 
+     } 
+    #loginSec .loginBox .imgBox img{
+        width: 100%;
+     }
+
+    #loginSec .loginBox .formBox {
+        width: 38%;
+        height: 400px;
+    }
+    #loginSec .loginBox .formBox h2 {
+        font-size: 1.3em;
+    }
+
+    #loginSec .loginBox .formBox .myLogForm input {
+        font-size: 0.75rem;
+    }
+
+    #loginSec .loginBox .formBox .myLogForm button {
+        font-size: 0.75rem;
+    }
+      #contactPage {
+        width: 100%;
+        height: 1361px;
+    }
+
+    #contactPage .contactIcons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #contactPage .contactsectionHeader h1 {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    #contactPage .contactGmap {
+        display: flex;
+    }
+
+    #contactPage .contactGmap form {
+        width: 80%;
+        margin-top:50px;
+    }
+
+    #contactPage .followheader ul {
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #contactPage .followheader ul li {
+        width: 60px;
+        height: 60px;
+        line-height: 69px;
+    }
+
+    #contactPage .contactGmap form {
+        width: 93%;
+        margin-top: 0;
+        margin: 0 0 0 38px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+      header .headerNav nav {
+        display: block;
+    }
+    header .headerNav .menuBar {
+        display: none;
+    }
+    header .headerNav ul li a {
+        text-decoration: none;
+        color: rgb(223, 223, 223);
+        font-size: 1.15em;
+        transition: all 0.3s;
+    }
+    header .headerNav ul li ul li a {
+        color: #6C7A89;
+        font-size: 1em;
+    }
+    header .headerNav ul li #rtlUl {
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        width: 350px;
+        left: 153px;
+        transform: translateY(-25px);
+    }
+
+    header .headerNav ul li ul.forblog {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background-color: white;
+        width: 160px;
+        padding: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+        border-radius: 3px;
+        top: 61px;
+        transition: all 0.2s;
+        z-index: -5;
+        left: 375px;
+    }
+    #siteBanner {
+        width: 100%;
+        height: 925px;
+    }
+    #siteBanner .bannerLayout {
+        height: 925px;
+    }
+
+    #siteBanner .bannerLayout .containInfo {
+        width: 100%;
+    }
+    #siteBanner .bannerLayout .containInfo .clever {
+        font-size: 4.4em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn {
+        display: flex;
+        justify-content: center;
+    }
+    #siteBanner .bannerLayout .containInfo p {
+        font-size: 1.9em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn .daxilol {
+        margin-right: 15px;
+        background-color: white;
+        color: #171F42;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn a {
+        font-size: 1.1em;
+        padding: 10px 30px;
+        border-radius: 5px
+    }
+  
+    #intellektInfo {
+        width: 100%;
+        height: 700px;
+    }
+    #intellektInfo .intellektBox .intellektWord h1 {
+        font-weight: bold;
+        color: #272E49;
+        font-size: 3rem;
+    }
+    #intellektInfo .intellektBox .iBox i {
+        font-size: 4em;
+        margin-bottom: 10px;
+        color: #FF5723;
+        transition: all 0.3s;
+    }
+    #intellektInfo .iBox .cardBox {
+        margin-bottom: 50px;
+    }
+    #intellektInfo .intellektBox .iBox h4 {
+        font-size: 1.7rem;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox p {
+        font-size: 1em;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox a {
+        font-size: 1.1em;
+    }
+   
+    #qaliblerimiz {
+        width: 100%;
+        height: 850px;
+    }
+    #qaliblerimiz .qalibWord h2 {
+        font-size: 2.5em;
+    }
+    #qaliblerimiz .qalibWord p {
+        color: #98A2AC;
+        font-size: 1em;
+    }
+     #qaliblerimiz .qalibCard .card,
+    .card-footer {
+        margin-bottom: 19px;
+    }
+    #qaliblerimiz .qalibCard .card,
+    .card-body {
+        flex: 1 1 auto;
+        padding: 0.35rem;
+    }
+ 
+   
+    #rating {
+        height: 900px;
+    }
+    #rating .ratingCard {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    #rating .ratingCard div>span {
+        font-size: 1.2em;
+    }
+    #rating .ratingCard h2 {
+        font-size: 3.2em;
+        margin: 39px 0;
+    }
+
+    #rating .ratingCard {
+        height: 540px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 19px 11px;
+        transition: all 0.5s;
+    }
+  
+      #reviewSlider {
+        background-size: cover;
+        background-position-x: -293px;
+    }
+   
+    #contactInfo {
+        height: 965px;
+    }
+
+    #sendMessage .sendMessageWord h2 {
+        font-size: 2.8em;
+    }
+    #sendMessage form {
+        width: 64%;
+    }
+
+    #brandSlider .owl-carousel .owl-item img {
+        width: 98%;
+        opacity: 0.5;
+    }
+  
+    footer {
+        overflow: hidden;
+    }
+    footer .footerNav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    footer .footerNav ul li a {
+        font-size: 0.9em;
+    }
+    footer .footerSocial ul {
+        display: flex;
+        padding: 0;
+        justify-content: flex-end;
+    }
+    footer p {
+        font-size: 0.9em;
+        text-align: left;
+    }
+
+           #loginSec {
+            width: 100%;
+            height: 710px;
+            display: flex;
+            align-items: center;    
+        }
+        
+        
+        #loginSec .loginBox{
+            height: 500px;
+           display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #loginSec .loginBox .imgBox{
+           display: block;
+           width: 40%;
+    
+        }
+        #loginSec .loginBox .imgBox h1{
+           font-size: 4.1em;
+     
+         }
+         #loginSec .loginBox .imgBox p{
+            font-size: 2.8em
+     
+         }
+        #loginSec .loginBox .imgBox img{
+            width: 100%;
+         }
+    
+        #loginSec .loginBox .formBox {
+            width: 38%;
+            height: 500px;
+        }
+        #loginSec .loginBox .formBox h2 {
+            font-size: 1.5em;
+        }
+    
+        #loginSec .loginBox .formBox .myLogForm input {
+            font-size: 1.3rem;
+        }
+    
+        #loginSec .loginBox .formBox .myLogForm button {
+            font-size: 1.3rem;
+        }
+   
+      #contactPage {
+        width: 100%;
+        height: 1361px;
+    }
+
+    #contactPage .contactIcons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #contactPage .contactsectionHeader h1 {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    #contactPage .contactGmap {
+        display: flex;
+    }
+
+  
+    #contactPage .contactGmap form {
+        width: 80%;
+        margin-top:50px;
+    }
+
+    #contactPage .followheader ul {
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #contactPage .followheader ul li {
+        width: 60px;
+        height: 60px;
+        line-height: 69px;
+    }
+
+    #contactPage .contactGmap form {
+        width: 93%;
+        margin-top: 0;
+        margin: 0 0 0 38px;
+    }
+  
+}
+
+@media only screen and (min-width: 1266px) {
+    
+    header .headerNav nav {
+        display: block;
+    }
+    header .headerNav .menuBar {
+        display: none;
+    }
+    header .headerNav ul li a {
+        text-decoration: none;
+        color: rgb(223, 223, 223);
+        font-size: 1.15em;
+        transition: all 0.3s;
+    }
+    header .headerNav ul li ul li a {
+        color: #6C7A89;
+        font-size: 1em;
+    }
+    header .headerNav ul li #rtlUl {
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        width: 350px;
+        left: 153px;
+        transform: translateY(-25px);
+    }
+
+    header .headerNav ul li ul.forblog {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background-color: white;
+        width: 160px;
+        padding: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+        border-radius: 3px;
+        top: 61px;
+        transition: all 0.2s;
+        z-index: -5;
+        left: 375px;
+    }
+ 
+    #siteBanner {
+        width: 100%;
+        height: 925px;
+    }
+    #siteBanner .bannerLayout {
+        height: 925px;
+    }
+
+    #siteBanner .bannerLayout .containInfo {
+        width: 100%;
+    }
+    #siteBanner .bannerLayout .containInfo .clever {
+        font-size: 4.4em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn {
+        display: flex;
+        justify-content: center;
+    }
+    #siteBanner .bannerLayout .containInfo p {
+        font-size: 1.9em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn .daxilol {
+        margin-right: 15px;
+        background-color: white;
+        color: #171F42;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn a {
+        font-size: 1.1em;
+        padding: 10px 30px;
+        border-radius: 5px
+    }
+  
+    #intellektInfo {
+        width: 100%;
+        height: 700px;
+    }
+    #intellektInfo .intellektBox .intellektWord h1 {
+        font-weight: bold;
+        color: #272E49;
+        font-size: 3rem;
+    }
+    #intellektInfo .intellektBox .iBox i {
+        font-size: 4em;
+        margin-bottom: 10px;
+        color: #FF5723;
+        transition: all 0.3s;
+    }
+    #intellektInfo .iBox .cardBox {
+        margin-bottom: 50px;
+    }
+    #intellektInfo .intellektBox .iBox h4 {
+        font-size: 1.7rem;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox p {
+        font-size: 1em;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox a {
+        font-size: 1.1em;
+    }
+  
+  
+    #qaliblerimiz {
+        width: 100%;
+        height: 850px;
+    }
+    #qaliblerimiz .qalibWord h2 {
+        font-size: 2.5em;
+    }
+    #qaliblerimiz .qalibWord p {
+        color: #98A2AC;
+        font-size: 1em;
+    }
+     #qaliblerimiz .qalibCard .card,
+    .card-footer {
+        margin-bottom: 19px;
+    }
+    #qaliblerimiz .qalibCard .card,
+    .card-body {
+        flex: 1 1 auto;
+        padding: 0.35rem;
+    }
+
+    #rating {
+        height: 900px;
+    }
+    #rating .ratingCard {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    #rating .ratingCard div>span {
+        font-size: 1.2em;
+    }
+    #rating .ratingCard h2 {
+        font-size: 3.2em;
+        margin: 39px 0;
+    }
+
+    #rating .ratingCard {
+        height: 540px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 19px 11px;
+        transition: all 0.5s;
+    }
+    #rating .ratingCard .seemore
+     a i {
+        transform: translateX(140px);
+        transition: all 0.5s;
+    }
+ 
+    #reviewSlider {
+        background-size: cover;
+        background-position-x: -121px;
+    }
+  
+    #contactInfo {
+        height: 965px;
+    }
+  
+    #sendMessage .sendMessageWord h2 {
+        font-size: 2.8em;
+    }
+    #sendMessage form {
+        width: 64%;
+    }
+   
+    #brandSlider .owl-carousel .owl-item img {
+        width: 98%;
+        opacity: 0.5;
+    }
+
+    footer {
+        overflow: hidden;
+    }
+    footer .footerNav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    footer .footerNav ul li a {
+        font-size: 0.9em;
+    }
+    footer .footerSocial ul {
+        display: flex;
+        padding: 0;
+        justify-content: flex-end;
+    }
+    footer p {
+        font-size: 0.9em;
+        text-align: left;
+    }
+   
+           #loginSec {
+            width: 100%;
+            height: 710px;
+            display: flex;
+            align-items: center;    
+        }
+        
+        
+        #loginSec .loginBox{
+            height: 500px;
+           display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #loginSec .loginBox .imgBox{
+           display: block;
+           width: 40%;
+    
+        }
+        #loginSec .loginBox .imgBox h1{
+           font-size: 4.1em;
+     
+         }
+         #loginSec .loginBox .imgBox p{
+            font-size: 2.8em
+     
+         }
+        #loginSec .loginBox .imgBox img{
+            width: 100%;
+         }
+    
+        #loginSec .loginBox .formBox {
+            width: 38%;
+            height: 500px;
+        }
+        #loginSec .loginBox .formBox h2 {
+            font-size: 1.5em;
+        }
+    
+        #loginSec .loginBox .formBox .myLogForm input {
+            font-size: 1.3rem;
+        }
+    
+        #loginSec .loginBox .formBox .myLogForm button {
+            font-size: 1.3rem;
+        }
+    
+      #contactPage {
+        width: 100%;
+        height: 1361px;
+    }
+
+    #contactPage .contactIcons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #contactPage .contactsectionHeader h1 {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    #contactPage .contactGmap {
+        display: flex;
+    }
+
+    #contactPage .contactGmap form {
+        width: 80%;
+        margin-top:50px;
+    }
+
+    #contactPage .followheader ul {
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #contactPage .followheader ul li {
+        width: 60px;
+        height: 60px;
+        line-height: 69px;
+    }
+
+    #contactPage .contactGmap form {
+        width: 93%;
+        margin-top: 0;
+        margin: 0 0 0 38px;
+    }
+  
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+    header .headerNav nav {
+        display: block;
+    }
+    header .headerNav .menuBar {
+        display: none;
+    }
+    header .headerNav ul li a {
+        text-decoration: none;
+        color: rgb(223, 223, 223);
+        font-size: 1.15em;
+        transition: all 0.3s;
+    }
+    header .headerNav ul li ul li a {
+        color: #6C7A89;
+        font-size: 1em;
+    }
+    header .headerNav ul li #rtlUl {
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        width: 350px;
+        left: 153px;
+        transform: translateY(-25px);
+    }
+
+    header .headerNav ul li ul.forblog {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background-color: white;
+        width: 160px;
+        padding: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+        border-radius: 3px;
+        top: 61px;
+        transition: all 0.2s;
+        z-index: -5;
+        left: 375px;
+    }
+   
+    #siteBanner {
+        width: 100%;
+        height: 925px;
+    }
+    #siteBanner .bannerLayout {
+        height: 925px;
+    }
+
+    #siteBanner .bannerLayout .containInfo {
+        width: 100%;
+    }
+    #siteBanner .bannerLayout .containInfo .clever {
+        font-size: 4.4em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn {
+        display: flex;
+        justify-content: center;
+    }
+    #siteBanner .bannerLayout .containInfo p {
+        font-size: 1.9em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn .daxilol {
+        margin-right: 15px;
+        background-color: white;
+        color: #171F42;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn a {
+        font-size: 1.1em;
+        padding: 10px 30px;
+        border-radius: 5px
+    }
+    #intellektInfo {
+        width: 100%;
+        height: 700px;
+    }
+    #intellektInfo .intellektBox .intellektWord h1 {
+        font-weight: bold;
+        color: #272E49;
+        font-size: 3rem;
+    }
+    #intellektInfo .intellektBox .iBox i {
+        font-size: 4em;
+        margin-bottom: 10px;
+        color: #FF5723;
+        transition: all 0.3s;
+    }
+    #intellektInfo .iBox .cardBox {
+        margin-bottom: 50px;
+    }
+    #intellektInfo .intellektBox .iBox h4 {
+        font-size: 1.7rem;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox p {
+        font-size: 1em;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox a {
+        font-size: 1.1em;
+    }
+   
+    
+    #qaliblerimiz {
+        width: 100%;
+        height: 850px;
+    }
+    #qaliblerimiz .qalibWord h2 {
+        font-size: 2.5em;
+    }
+    #qaliblerimiz .qalibWord p {
+        color: #98A2AC;
+        font-size: 1em;
+    }
+     #qaliblerimiz .qalibCard .card,
+    .card-footer {
+        margin-bottom: 19px;
+    }
+    #qaliblerimiz .qalibCard .card,
+    .card-body {
+        flex: 1 1 auto;
+        padding: 0.35rem;
+    }
+
+  
+    #rating {
+        height: 900px;
+    }
+    #rating .ratingCard {
+        margin-bottom: 0;
+        text-align: left;
+    }
+    #rating .ratingCard div>span {
+        font-size: 1.2em;
+    }
+    #rating .ratingCard h2 {
+        font-size: 3.2em;
+        margin: 39px 0;
+    }
+
+    #rating .ratingCard {
+        height: 590px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 40px 40px;
+        transition: all 0.5s;
+    }
+    #rating .ratingCard .seemore a i {
+        transform: translateX(140px);
+        transition: all 0.5s;
+    }
+  
+    
+    #reviewSlider {
+        background-size: cover;
+        background-position-x: 1px;
+    }
+   
+    #contactInfo {
+        height: 965px;
+    }
+  
+    #sendMessage .sendMessageWord h2 {
+        font-size: 2.8em;
+    }
+    #sendMessage form {
+        width: 64%;
+    }
+ 
+    #brandSlider .owl-carousel .owl-item img {
+        width: 98%;
+        opacity: 0.5;
+    }
+
+    footer {
+        overflow: hidden;
+    }
+    footer .footerNav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    footer .footerNav ul li a {
+        font-size: 0.9em;
+    }
+    footer .footerSocial ul {
+        display: flex;
+        padding: 0;
+        justify-content: flex-end;
+    }
+    footer p {
+        font-size: 0.9em;
+        text-align: left;
+    }
+    
+
+               #loginSec {
+                width: 100%;
+                height: 710px;
+                display: flex;
+                align-items: center;    
+            }
+            
+            
+            #loginSec .loginBox{
+                height: 500px;
+               display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            #loginSec .loginBox .imgBox{
+               display: block;
+               width: 32%;
+        
+            }
+            #loginSec .loginBox .imgBox img{
+                width: 100%;
+             }
+        
+            #loginSec .loginBox .formBox {
+                width: 38%;
+                height: 452px;
+            }
+            #loginSec .loginBox .formBox h2 {
+                font-size: 1.3em;
+            }
+        
+            #loginSec .loginBox .formBox .myLogForm input {
+                font-size: 1.2rem;
+            }
+        
+            #loginSec .loginBox .formBox .myLogForm button {
+                font-size: 1.2  rem;
+            }
+ 
+      #contactPage {
+        width: 100%;
+        height: 1361px;
+    }
+
+    #contactPage .contactIcons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #contactPage .contactsectionHeader h1 {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    #contactPage .contactGmap {
+        display: flex;
+    }
+
+    #contactPage .contactGmap form {
+        width: 80%;
+        margin-top:50px;
+    }
+
+    #contactPage .followheader ul {
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #contactPage .followheader ul li {
+        width: 60px;
+        height: 60px;
+        line-height: 69px;
+    }
+
+    #contactPage .contactGmap form {
+        width: 93%;
+        margin-top: 0;
+        margin: 0 0 0 38px;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 1600px) {
+     
+    header .headerNav nav {
+        display: block;
+    }
+    header .headerNav .menuBar {
+        display: none;
+    }
+    header .headerNav ul li a {
+        text-decoration: none;
+        color: rgb(223, 223, 223);
+        font-size: 1.15em;
+        transition: all 0.3s;
+    }
+    header .headerNav ul li ul li a {
+        color: #6C7A89;
+        font-size: 1em;
+    }
+    header .headerNav ul li #rtlUl {
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        width: 350px;
+        left: 153px;
+        transform: translateY(-25px);
+    }
+
+    header .headerNav ul li ul.forblog {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background-color: white;
+        width: 160px;
+        padding: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+        border-radius: 3px;
+        top: 61px;
+        transition: all 0.2s;
+        z-index: -5;
+        left: 375px;
+    }
+
+    #siteBanner {
+        width: 100%;
+        height: 925px;
+    }
+    #siteBanner .bannerLayout {
+        height: 925px;
+    }
+
+    #siteBanner .bannerLayout .containInfo {
+        width: 100%;
+    }
+    #siteBanner .bannerLayout .containInfo .clever {
+        font-size: 4.4em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn {
+        display: flex;
+        justify-content: center;
+    }
+    #siteBanner .bannerLayout .containInfo p {
+        font-size: 1.9em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn .daxilol {
+        margin-right: 15px;
+        background-color: white;
+        color: #171F42;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn a {
+        font-size: 1.1em;
+        padding: 10px 30px;
+        border-radius: 5px
+    }
+  
+    #intellektInfo {
+        width: 100%;
+        height: 700px;
+    }
+    #intellektInfo .intellektBox .intellektWord h1 {
+        font-weight: bold;
+        color: #272E49;
+        font-size: 3rem;
+    }
+    #intellektInfo .intellektBox .iBox i {
+        font-size: 4em;
+        margin-bottom: 10px;
+        color: #FF5723;
+        transition: all 0.3s;
+    }
+    #intellektInfo .iBox .cardBox {
+        margin-bottom: 50px;
+    }
+    #intellektInfo .intellektBox .iBox h4 {
+        font-size: 1.7rem;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox p {
+        font-size: 1em;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox a {
+        font-size: 1.1em;
+    }
+   
+    #qaliblerimiz {
+        width: 100%;
+        height: 850px;
+    }
+    #qaliblerimiz .qalibWord h2 {
+        font-size: 2.5em;
+    }
+    #qaliblerimiz .qalibWord p {
+        color: #98A2AC;
+        font-size: 1em;
+    }
+     #qaliblerimiz .qalibCard .card,
+    .card-footer {
+        margin-bottom: 19px;
+    }
+    #qaliblerimiz .qalibCard .card,
+    .card-body {
+        flex: 1 1 auto;
+        padding: 0.35rem;
+    }
+
+ 
+    #rating {
+        height: 900px;
+    }
+    #rating .ratingCard {
+        margin-bottom: 0;
+        text-align: left;
+    }
+    #rating .ratingCard div>span {
+        font-size: 1.2em;
+    }
+    #rating .ratingCard h2 {
+        font-size: 3.2em;
+        margin: 39px 0;
+    }
+
+    #ratingPrice .ratingCard {
+        height: 590px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 40px 40px;
+        transition: all 0.5s;
+    }
+    #rating .ratingCard .seemore a i {
+        transform: translateX(140px);
+        transition: all 0.5s;
+    }
+
+    #reviewSlider {
+        background-size: 116%;
+        background-position-x: 0;
+    }
+ 
+    #contactInfo {
+        height: 965px;
+    }
+ 
+    #sendMessage .sendMessageWord h2 {
+        font-size: 2.8em;
+    }
+    #sendMessage form {
+        width: 64%;
+    }
+    
+    footer {
+        overflow: hidden;
+    }
+    footer .footerNav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    footer .footerNav ul li a {
+        font-size: 0.9em;
+    }
+    footer .footerSocial ul {
+        display: flex;
+        padding: 0;
+        justify-content: flex-end;
+    }
+    footer p {
+        font-size: 0.9em;
+        text-align: left;
+    }
+   
+                 #loginSec {
+                    width: 100%;
+                    height: 710px;
+                    display: flex;
+                    align-items: center;    
+                }
+                
+                
+                #loginSec .loginBox{
+                    height: 500px;
+                   display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                #loginSec .loginBox .imgBox{
+                   display: block;
+                   width: 32%;
+            
+                }
+                #loginSec .loginBox .imgBox img{
+                    width: 100%;
+                 }
+            
+                #loginSec .loginBox .formBox {
+                    width: 38%;
+                    height: 452px;
+                }
+                #loginSec .loginBox .formBox h2 {
+                    font-size: 1.5em;
+                }
+            
+                #loginSec .loginBox .formBox .myLogForm input {
+                    font-size: 1.3rem;
+                }
+            
+                #loginSec .loginBox .formBox .myLogForm button {
+                    font-size: 1.3rem;
+                }
+            
+}
+
+@media only screen and (min-width: 2560px) {
+    
+    header .headerNav nav {
+        display: block;
+    }
+    header .headerNav .menuBar {
+        display: none;
+    }
+    header .headerNav ul li a {
+        text-decoration: none;
+        color: rgb(223, 223, 223);
+        font-size: 1.15em;
+        transition: all 0.3s;
+    }
+    header .headerNav ul li ul li a {
+        color: #6C7A89;
+        font-size: 1em;
+    }
+    header .headerNav ul li #rtlUl {
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        width: 350px;
+        left: 153px;
+        transform: translateY(-25px);
+    }
+
+    header .headerNav ul li ul.forblog {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background-color: white;
+        width: 160px;
+        padding: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+        border-radius: 3px;
+        top: 61px;
+        transition: all 0.2s;
+        z-index: -5;
+        left: 375px;
+    }
+ 
+    #siteBanner {
+        width: 100%;
+        height: 925px;
+    }
+    #siteBanner .bannerLayout {
+        height: 925px;
+    }
+
+    #siteBanner .bannerLayout .containInfo {
+        width: 100%;
+    }
+    #siteBanner .bannerLayout .containInfo .clever {
+        font-size: 4.4em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn {
+        display: flex;
+        justify-content: center;
+    }
+    #siteBanner .bannerLayout .containInfo p {
+        font-size: 1.9em;
+    }
+    #siteBanner .bannerLayout .containInfo .forBannerBtn .daxilol {
+        margin-right: 15px;
+        background-color: white;
+        color: #171F42;
+    }
+  
+    #siteBanner .bannerLayout .containInfo .forBan
+    nerBtn a {
+        font-size: 1.1em;
+        padding: 10px 30px;
+        border-radius: 5px
+    }
+
+    #intellektInfo {
+        width: 100%;
+        height: 700px;
+    }
+    #intellektInfo .intellektBox .intellektWord h1 {
+        font-weight: bold;
+        color: #272E49;
+        font-size: 3rem;
+    }
+    #intellektInfo .intellektBox .iBox i {
+        font-size: 4em;
+        margin-bottom: 10px;
+        color: #FF5723;
+        transition: all 0.3s;
+    }
+    #intellektInfo .iBox .cardBox {
+        margin-bottom: 50px;
+    }
+    #intellektInfo .intellektBox .iBox h4 {
+        font-size: 1.7rem;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox p {
+        font-size: 1em;
+    }
+    #intellektInfo .intellektBox .iBox .cardBox a {
+        font-size: 1.1em;
+    }
+    
+    #qaliblerimiz {
+        width: 100%;
+        height: 850px;
+    }
+    #qaliblerimiz .qalibWord h2 {
+        font-size: 2.5em;
+    }
+    #qaliblerimiz .qalibWord p {
+        color: #98A2AC;
+        font-size: 1em;
+    }
+     #qaliblerimiz .qalibCard .card,
+    .card-footer {
+        margin-bottom: 19px;
+    }
+    #qaliblerimiz .qalibCard .card,
+    .card-body {
+        flex: 1 1 auto;
+        padding: 0.35rem;
+    }
+
+   
+    #rating {
+        height: 900px;
+    }
+    #rating .ratingCard {
+        margin-bottom: 0;
+        text-align: left;
+    }
+    #rating .ratingCard div>span {
+        font-size: 1.2em;
+    }
+    #rating .ratingCard h2 {
+        font-size: 3.2em;
+        margin: 39px 0;
+    }
+
+    #rating .ratingCard {
+        height: 590px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 40px 40px;
+        transition: all 0.5s;
+    }
+    #rating .ratingCard .seemore a i {
+        transform: translateX(140px);
+        transition: all 0.5s;
+    }
+  
+    #reviewSlider {
+        background-size: 116%;
+        background-position-x: 0;
+    }
+   
+    #contactInfo {
+        height: 965px;
+    }
+   
+    #sendMessage .sendMessageWord h2 {
+        font-size: 2.8em;
+    }
+    #sendMessage form {
+        width: 64%;
+    }
+  
+    #brandSlider .owl-carousel .owl-item img {
+        width: 98%;
+        opacity: 0.5;
+    }
+  
+    footer {
+        overflow: hidden;
+    }
+    footer .footerNav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    footer .footerNav ul li a {
+        font-size: 0.9em;
+    }
+    footer .footerSocial ul {
+        display: flex;
+        padding: 0;
+        justify-content: flex-end;
+    }
+    footer p {
+        font-size: 0.9em;
+        text-align: left;
+    }
+   
+                 #loginSec {
+                    width: 100%;
+                    height: 710px;
+                    display: flex;
+                    align-items: center;    
+                }
+                
+                
+                #loginSec .loginBox{
+                    height: 500px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                #loginSec .loginBox .imgBox{
+                   display: block;
+                   width: 32%;
+            
+                }
+                #loginSec .loginBox .imgBox img{
+                    width: 100%;
+                 }
+            
+                #loginSec .loginBox .formBox {
+                    width: 38%;
+                    height: 452px;
+                }
+                #loginSec .loginBox .formBox h2 {
+                    font-size: 1.5em;
+                }
+            
+                #loginSec .loginBox .formBox .myLogForm input {
+                    font-size: 1.3rem;
+                }
+            
+                #loginSec .loginBox .formBox .myLogForm button {
+                    font-size: 1.3rem;
+                }
+        
+           
+}
+.h2, h2 {
+    font-size: 2.625rem;
+    font-family: inherit;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #171f3c;
+    word-wrap: break-word;
+}
+
+.winners {
+    font-size: 2.625rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    line-height: 1.1;
+    color: white;
+    word-wrap: break-word;
+    
+}
+.d-title {
+    display: inline;
+    text-indent: 10px;
+}
+.display-3 {
+    font-size: 4.5rem;
+      line-height: 1.5;
+}
+
+h2 {
+    display: block;
+       margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+.fw-200 {
+    font-weight: 200;
+}
+.text-capitalize {
+    text-transform: capitalize!important;
+}
+.d-title span:nth-child(2) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    color: #fff;
+}
+@keyframes rotateWord{
+    0%, 100%, 80% {
+        opacity: 0;
+    }
+    2% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    47%, 5% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+.d-title span {
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: #fff;
+    animation: 4s linear infinite rotateWord;
+}
+
+.d-title span {
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: #fff;
+    -webkit-animation: 4s linear infinite rotateWord;
+    animation: 4s linear infinite rotateWord;
+}
+.d-title {
+
+    text-indent: 10px;
+}
+.rtl-layout a {
+    position: fixed;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    z-index: 99;
+    color: #fff;
+    top: 50%;
+    display: block;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+        border-right: 0;
+}
+[role=button], a, area, button, input, label, select, summary, textarea {
+    touch-action: manipulation;
+}
+a {   
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+}
+a:hover{
+    text-decoration: none
+}
+.rtl-enable {
+    direction: rtl;
+}
+
+.question{
+    height: 100px;
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question p{
+    margin: auto;
+    padding: auto;
+}
+.answer{
+    height: 50px;
+    width: 230px;
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px auto;
+  border-radius: 8px;
+}
+
+.question{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 988px) {
+    .secondpart{
+        margin-top:22px;
+    }
+}
+
+.examnavbar{
+    background-color: blue;
+    height: 92px;
+}
+
+.questioncontainer{
+    background-color: rgba(0, 102, 235, 0.74);
+    height: 566px;
+}
+
+.next{
+    width:80px;
+    cursor: pointer;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    color: blue;
+}
+
+@media only screen and (max-width: 555px) 
+{
+  .next{
+      margin-left: 95px;
+  }
+}
+
+.register{
+    margin-top: 35px;
+}
+

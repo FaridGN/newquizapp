@@ -1,0 +1,15 @@
+﻿@model Intellect.Models.ViewModels.AdminViewModel
+
+@{
+    Layout = "AdminLayout";
+}
+
+<h4>Are you sure to delete @Model.Exam.Name ?</h4>
+
+<form method="post" asp-action="DeleteExam" asp-controller="Admin">
+    <button type="submit">Yes</button>
+</form>
+    <br />
+<form method="get">
+<button type="submit" asp-action="Admin" asp-controller="Admin">No</button>
+</form>

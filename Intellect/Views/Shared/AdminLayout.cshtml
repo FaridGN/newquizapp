@@ -1,0 +1,101 @@
+﻿@using System.Threading
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ExamUser> SignInManager
+@inject UserManager<ExamUser> UserManager
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://kit.fontawesome.com/5e88d62c54.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/back.css">
+    <title>Admin</title>
+</head>
+<body>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="index.html"><img class="agilli" src="~/images/agilli.png" alt="AgilliGelir"></a>
+                <div class="myaccount">
+                    <a href="#"><i class="fas fa-user"></i></a><br />
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <form class="accounted" method="post" asp-action="AdminLogout" asp-controller="Account">
+                            <ul>
+                                <li>
+                                    <a href="">@UserManager.GetUserName(User)!</a>
+                                </li>
+                                <li>
+                                    <button type="submit" style="border: 0px solid transparent; margin-left:-25px; font-size: 14px; cursor: pointer; font-weight: bold;" class="logoutbtn">LogOut</button>
+                                </li>
+                            </ul>
+                        </form>
+                    }
+                    else
+                    {
+                        <a asp-action="AdminLogin" asp-controller="Account">Daxil ol</a>
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="clear"></div>
+    @RenderBody()
+    <footer>
+        <div class=" container ">
+            <div class=" row ">
+                <div class=" col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 ">
+                    <div class=" footerNav ">
+                        <ul>
+                            <li><a href=" index.html ">Ana Səhifə</a></li>
+                            <li><a href=" #reytinq ">Reytinq</a></li>
+                            <li><a href=" about.html ">Haqqımızda</a></li>
+                            <li><a href="#contact">Əlaqə</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class=" col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
+                    <div class=" footerSocial ">
+                        <ul>
+                            <li><a href="#"><i class=" fab fa-facebook-f "></i></li>
+                            <li><a href="#"><i class=" fab fa-twitter "></i></a></li>
+                            <li><a href="#"><i class=" fab fa-google-plus-g "></i></a></li>
+                            <li><a href="#"><i class=" fab fa-pinterest-p "></i></a></li>
+                            <li><a href="#"><i class=" fab fa-linkedin-in "></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>© 2020, Müəllif hüquqları qorunur</p>
+        </div>
+    </footer>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="~/js/main.js"></script>
+
+    @RenderSection("Script", false)
+
+</body>
+</html>

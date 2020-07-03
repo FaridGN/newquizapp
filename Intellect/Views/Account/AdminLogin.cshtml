@@ -1,0 +1,47 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model Intellect.Models.ViewModels.LoginModel
+
+@{
+    Layout = "AdminLayout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminLogin</title>
+</head>
+<body>
+    <section class="posts">
+        <div class="post-container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="register">
+                        <form method="post" asp-action="AdminLogin" asp-controller="Account">
+                            <div asp-validation-summary="ModelOnly"></div>
+                            <h6>Login</h6>
+                            <label asp-for="UserName" style="width: 80px" for="Email">Username</label>
+                            <input asp-for="UserName" class="loginput" type="text"><br>
+                            <span asp-validation-for="UserName"></span>
+                            <label asp-for="Password" style="width: 80px" for="Password">Password</label>
+                            <input asp-for="Password" class="loginput" type="text">
+                            <span asp-validation-for="Password"></span>
+                            <button class="enter">Login</button><br>
+                            <input asp-for="RememberMe" type="checkbox" name="remember"> Remember me
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

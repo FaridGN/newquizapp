@@ -1,0 +1,14 @@
+
+.myaccount{
+    float: right;
+    margin-right:20px;
+    text-align: center;
+}
+
+.clear{
+    clear: both;
+}
+
+.agilli{
+    float: left;
+}

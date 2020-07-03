@@ -1,0 +1,95 @@
+﻿@model Intellect.Models.ViewModels.AdminViewModel
+
+    @{
+        Layout = "AdminLayout";
+    }
+
+    <div class="questioncontainer">        
+        <form asp-action="Question" asp-controller="Home" asp-route-id="@Model.NextQuestion.Id" asp-route-count="@ViewBag.Equestions">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 col-sm-12">
+                    <table>
+                        <tr>
+                            <th>Qaliq vaxt</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="time"></div> 
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="question">@Model.CurrentQuestion.Description </div>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-0"></div>
+                @{
+                    int n = 0;
+                }
+                @foreach (Answer item in Model.Answers)
+                {
+                    if (n == 0 || n == 2)
+                    {
+                        @: <div class="col-lg-3 col-sm-12">
+                            @: <div class="firstpart">
+                            }
+                            <input asp-for="@item.Id" name="@item.Id" hidden />
+                            <input type="radio" asp-for="@item.Id" name="myanswer" value="@item.Id" />@item.Description
+
+                            <br>
+                            if (n == 1 || n == 3)
+                            {
+                            @:</div>
+                        @:</div>
+                    }
+
+                    n++;
+                }
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-4">
+
+                </div>
+                <div class="col-lg-3 col-sm-4">
+
+                </div>
+                <div class="col-lg-3 col-sm-4">
+                    <div class="nextbtn">
+                        @if (ViewBag.Equestions == 0)
+                        {
+                            <input type="submit" value="Finish" />
+                        }
+                        else
+                        {
+                            <input type="submit" value="Next" />
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+@section Script{ 
+    <script>
+        function StartTimer(seconds) {
+            var intSeconds = seconds;
+            var timer = setInterval(myTimer, 1000);
+            function myTimer() {
+                if (intSeconds < 0) {
+                    alert("bitdi")
+                    clearInterval(timer)
+                    return;
+                }
+                document.getElementById("time").innerText = intSeconds;
+                intSeconds--;
+            }
+        }
+        StartTimer(60);
+
+    </script>
+}

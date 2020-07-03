@@ -1,0 +1,48 @@
+﻿@model Intellect.Models.ViewModels.AdminViewModel
+
+@{
+    Layout = "AdminLayout";
+}
+
+<h4>User Dashboard</h4>
+
+<div class="container-fluid"> 
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="management">
+                <button class="clickon"><a asp-action="GetProfile" asp-controller="Account">Profilim</a></button><br />
+                <button class="clickon"><a asp-action="Enroll" asp-controller="Account">İlkin qeydiyyat</a></button><br />
+                <button class="clickon"><a asp-action="CreateExam" asp-controller="Admin">Nəticələrim</a></button><br />
+                <button class="clickon"><a asp-action="CreateQuestion" asp-controller="Admin">Qaydalar</a></button><br />
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h5>Hər hansı imtahana qeydiyyatdan keçməzdən əvvəl ilkin qeydiyyatdan keçin.</h5>
+            <table>
+                <tr>
+                    <th>Növbəti İmtahan</th>
+                    <th>Tarix</th>
+                </tr>
+                @foreach (Exam item in Model.Exams)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.ExamDate.ToString("dd/MM/yyyy")</td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+        <div class="col-lg-4">
+            Exams
+            @foreach (Exam exam in Model.Exams)
+            {
+                <button class="clickon"><a asp-action="Test" asp-controller="Home" asp-route-id="@exam.Id">Start @exam.Name</a></button><br />
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

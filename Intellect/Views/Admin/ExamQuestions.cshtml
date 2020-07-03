@@ -1,0 +1,50 @@
+﻿@model Intellect.Models.ViewModels.AdminViewModel
+
+@{
+    Layout = "AdminLayout";
+}
+
+<h4>Admin Dashboard</h4>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="management">
+                <button class="clickon"><a href="">Exams</a></button><br />
+                <button class="clickon"><a asp-action="Exams" asp-controller="Admin">Questions</a></button><br />
+                <button class="clickon"><a asp-action="CreateExam" asp-controller="Admin">Create Exam</a></button><br />
+                <button class="clickon"><a asp-action="CreateQuestion" asp-controller="Admin">Create Question</a></button><br />
+                <button class="clickon">Create Answer</button><br />
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <table>
+                <tr>
+                    <th>N0</th>
+                    <th>Question</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                @foreach (Question item in Model.Questions)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td><a asp-action="EditQuestion" asp-controller="Admin" asp-route-id="@item.Id">Edit</a></td>
+                        <td><a asp-action="DeleteQuestion" asp-controller="Admin" asp-route-id="@item.Id">Delete</a></td>
+                    </tr>
+                    @foreach (Answer element in item.Answers)
+                    {
+                        <tr>
+                            <td>-</td>
+                            <td>@element.Description</td>
+                            <td><a asp-action="EditAnswer" asp-controller="Admin" asp-route-id="@element.Id">Edit</a></td>
+                            <td><a asp-action="DeleteAnswer" asp-controller="Admin" asp-route-id="@element.Id">Delete</a></td>
+                        </tr>
+                    }
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

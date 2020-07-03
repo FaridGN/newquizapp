@@ -1,0 +1,22 @@
+﻿@model Intellect.Models.Exam
+
+@{
+    Layout = "AdminLayout";
+}
+
+<div class="container-fluid">
+    <h4>Edit Exam</h4><br />
+                      <form method="post" asp-action="EditExam" asp-controller="Admin">
+                          <div asp-validation-summary="ModelOnly"></div>
+                          <label asp-for="Name">Name</label>
+                          <input asp-for="Name" type="text" class="mytext" /><br />
+                          <label asp-for="ExamDate">Date</label>
+                          <input asp-for="ExamDate" type="date" class="mydate" name="examdate" /><br />
+                          <label asp-for="ExamStartDateTime">Start</label>
+                          <input asp-for="ExamStartDateTime" type="time" class="mydate" name="ExamStartDateTime" /><br />
+                          <label asp-for="ExamEndDateTime">End</label>
+                          <input asp-for="ExamEndDateTime" type="time" class="mydate" name="ExamEndDateTime" />
+                          <input type="submit" value="Submit" />
+                      </form>
+
+</div> 

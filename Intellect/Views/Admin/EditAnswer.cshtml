@@ -1,0 +1,42 @@
+﻿@model Intellect.Models.ViewModels.AdminViewModel
+
+@{
+    Layout = "AdminLayout";
+}
+
+<div class="container-fluid">
+    <h4>Create Answer</h4><br />
+                          <form method="post" asp-action="EditAnswer" asp-controller="Admin">
+                              <div asp-validation-summary="ModelOnly"></div>
+                              <input type="hidden" asp-for="Answer.Id" />
+                              <label asp-for="Answer.Description">Description</label>
+                              <input asp-for="Answer.Description" type="text" class="mytext" /><br />
+                              <label asp-for="Answer.Correct">Correct</label>
+                              <input asp-for="Answer.Correct" type="checkbox" id="crt" class="mytext" name="correct" /><br />
+                              <label asp-for="Answer.Question.Name">Exam</label>
+                              <select asp-for="Answer.QuestionId" asp-items="@Model.QuestionList"></select><br />
+                              <input type="submit" value="Submit" />
+                          </form>
+
+</div> 
+
+@section Script{
+    <script>
+        $(document).ready = function () {
+            $('#checkbox-value').text($('#crt').val());
+
+            $("#crt").on('change', function () {
+                if ($(this).is(':checked')) {
+                    $(this).attr('value', 'true');
+                } else {
+                    $(this).attr('value', 'false');
+                }
+
+                $('#checkbox-value').text($('#crt').val());
+            });
+        }
+    </script>
+}
+
+
+
